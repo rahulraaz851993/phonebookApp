@@ -9,14 +9,14 @@
     <section class="modal-card-body">
       <div class="field">
       <div class="control">
-        <input class="input" type="text" :class="{'is-danger':errors.brand}" placeholder="Brand Name" v-model="list.brand">
-        <small v-if="errors.brand" class="has-text-danger">{{errors.brand[0]}}</small>
+        <input class="input" type="text" :class="{'is-danger':errors.brand_name}" placeholder="Brand Name" v-model="list.brand_name">
+        <small v-if="errors.brand_name" class="has-text-danger">{{errors.brand_name[0]}}</small>
       </div>
       </div>
       <div class="field">
       <div class="control">
-        <input class="input" type="text" :class="{'is-danger':errors.model}" placeholder="Model Name" v-model="list.model">
-        <small v-if="errors.model" class="has-text-danger">{{errors.model[0]}}</small>
+        <input class="input" type="text" :class="{'is-danger':errors.mobile_name}" placeholder="Model Name" v-model="list.mobile_name">
+        <small v-if="errors.mobile_name" class="has-text-danger">{{errors.mobile_name[0]}}</small>
       </div>
       </div>
       <div class="field">
@@ -32,7 +32,7 @@
       </div>
     </section>
     <footer class="modal-card-foot">
-      <button class="button is-success" @click="savePhoneDetails">Save</button>
+      <button class="button is-success" @click="savePhoneDetails">Update</button>
       <button class="button" @click="close">Cancel</button>
     </footer>
   </div>
@@ -46,12 +46,7 @@ export default {
   ],
   data(){
     return {
-      list : {
-           brand : '',
-           model : '',
-           price : '',
-           warranty : ''
-      },
+      list : {},
       errors : {}
     }
   },
